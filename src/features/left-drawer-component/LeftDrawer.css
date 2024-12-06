@@ -1,0 +1,51 @@
+/* WRAPPERS */
+
+.leftDrawerMainContainer {
+  max-width: 300px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  border-right: 2px solid #e2e6e9;
+  background-color: #ffffff;
+  padding: 15px;
+  padding-left: 20px;
+}
+
+.leftDrawerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding-right: 15px;
+}
+
+/* LOGO CONTAINER AND LOGO TEXT CSS */
+
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  min-height: 50px;
+  user-select: none;
+}
+
+.logoIconContainer {
+  display: flex;
+  max-height: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.logoText {
+  color: #18191b;
+  font-size: 25px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.accountSelectContainer {
+  min-height: 70px;
+  border: 2px solid #e2e6e9;
+  border-radius: 15px;
+}
