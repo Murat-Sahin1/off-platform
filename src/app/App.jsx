@@ -1,8 +1,16 @@
+import { Outlet } from "react-router";
+import LeftDrawer from "../features/left-drawer-component/LeftDrawer";
 import "./App.css";
-import Home from "./pages/Home/Home";
 
 function App() {
-  return <Home></Home>;
+  return (
+    <>
+      <LeftDrawer />
+      <div>
+        <Outlet></Outlet>
+      </div>
+    </>
+  );
 }
 
 export default App;
