@@ -1,15 +1,8 @@
-import { useState } from "react";
 import "./App.css";
-import LeftDrawer from "../features/left-drawer-component/LeftDrawer";
+import Home from "./pages/Home/Home";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div className="app-container">
-      <LeftDrawer></LeftDrawer>
-    </div>
-  );
+  return <Home></Home>;
 }
 
 export default App;

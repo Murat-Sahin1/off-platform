@@ -1,0 +1,60 @@
+.leftDrawerButtonContainer {
+  border-radius: 15px;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  background-color: #ffffff;
+  min-height: 50px;
+  padding: 0px 20px;
+  gap: 10px;
+  user-select: none;
+  align-items: center;
+}
+
+.activeLeftDrawerButtonContainer {
+  border-radius: 15px;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  background-color: #e2e6e9d3;
+  min-height: 50px;
+  padding: 0px 20px;
+  gap: 10px;
+  user-select: none;
+  align-items: center;
+}
+
+.leftDrawerButtonContainer:hover {
+  background-color: #e2e6e9d3;
+  cursor: pointer;
+}
+
+.leftDrawerLogoContainer {
+  display: flex;
+  max-height: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonTextContainer {
+  height: fit-content;
+  height: auto;
+  color: #808a91;
+}
+
+.buttonActiveTextContainer {
+  height: fit-content;
+  height: auto;
+}
+
+.leftDrawerButtonIcon {
+  filter: invert(50%) sepia(7%) saturate(1000%) hue-rotate(170deg)
+    brightness(90%) contrast(85%);
+  width: 25px;
+  height: 25px;
+}
+
+.leftDrawerActiveButtonIcon {
+  width: 25px;
+  height: 25px;
+}

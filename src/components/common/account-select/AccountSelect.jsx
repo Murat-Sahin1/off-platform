@@ -1,9 +1,8 @@
 import React from "react";
 import "./AccountSelect.css";
-import profilePicture from "../../../assets/valve.jpg";
 import downArrow from "../../../assets/down-arrow.png";
 
-function AccountSelect() {
+function AccountSelect({ nickName, mail, profilePicture }) {
   return (
     <div className="accountSelectContainer">
       <div className="accountIconContainer">
@@ -16,8 +15,8 @@ function AccountSelect() {
       <div className="accountContentWrapper">
         <div className="accountTextContainer">
           {/* These overflow extensively when given big inputs */}
-          <p className="accountName">Expect the unexpected</p>
-          <p className="accountMail">dr.ford@farwest.com</p>
+          <p className="accountName">{nickName}</p>
+          <p className="accountMail">{mail}</p>
         </div>
         <div className="toggleIconContainer">
           <img src={downArrow} className="downArrow" draggable="false"></img>
