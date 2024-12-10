@@ -4,18 +4,19 @@ import AccountSelect from "../../components/common/account-select/AccountSelect"
 import LeftDrawerButton from "./LeftDrawerButton";
 import { LEFT_DRAWER_BUTTONS } from "../../constants/leftDrawer";
 import { logo, profilePicture } from "../../assets";
+import { NavLink } from "react-router";
 
 function LeftDrawer() {
   return (
     <>
       <div className="leftDrawerMainContainer">
         <div className="leftDrawerContent">
-          <div className="logoContainer">
+          <NavLink to="/" className="logoContainer">
             <div className="logoIconContainer">
               <img src={logo} className="logoIcon" draggable="false"></img>
               <p className="logoText">Off Tone</p>
             </div>
-          </div>
+          </NavLink>
           <AccountSelect
             nickName="dr.ford"
             mail="dr.ford@farwest.com"

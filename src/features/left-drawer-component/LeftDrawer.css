@@ -20,10 +20,13 @@
 /* LOGO CONTAINER AND LOGO TEXT CSS */
 
 .logoContainer {
+  all: unset;
   display: flex;
   align-items: center;
   align-content: center;
   min-height: 50px;
+  cursor: pointer;
+  max-width: 60%;
   user-select: none;
 }
 
