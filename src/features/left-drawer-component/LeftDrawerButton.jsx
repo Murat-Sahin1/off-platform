@@ -1,33 +1,43 @@
 import React, { useState } from "react";
 import "./LeftDrawerButton.css";
+import { NavLink } from "react-router";
 
-function LeftDrawerButton({ onClick, item, isActive }) {
+function LeftDrawerButton({ item }) {
+  const [isLeftDrawerButtonActive, setIsLeftDrawerButtonActive] =
+    useState(false);
+
   return (
-    <div
-      className={
-        isActive
+    <NavLink
+      to={item.path}
+      className={({ isActive }) => {
+        setIsLeftDrawerButtonActive(isActive);
+        return isLeftDrawerButtonActive
           ? "activeLeftDrawerButtonContainer"
-          : "leftDrawerButtonContainer"
-      }
-      onClick={onClick}
+          : "leftDrawerButtonContainer";
+      }}
+      draggable="false"
     >
       <div className="leftDrawerLogoContainer">
         <img
           src={item.icon}
           className={
-            isActive ? "leftDrawerActiveButtonIcon" : "leftDrawerButtonIcon"
+            isLeftDrawerButtonActive
+              ? "leftDrawerActiveButtonIcon"
+              : "leftDrawerButtonIcon"
           }
           draggable="false"
         ></img>
       </div>
       <div
         className={
-          isActive ? "buttonActiveTextContainer" : "buttonTextContainer"
+          isLeftDrawerButtonActive
+            ? "buttonActiveTextContainer"
+            : "buttonTextContainer"
         }
       >
         <p>{item.label}</p>
       </div>
-    </div>
+    </NavLink>
   );
 }
 

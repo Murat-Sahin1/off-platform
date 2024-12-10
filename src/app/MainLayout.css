@@ -1,0 +1,7 @@
+.applicationWrapper {
+  display: flex;
+}
+
+.outletWrapper {
+  flex-grow: 1;
+}

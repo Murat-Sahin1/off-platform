@@ -1,16 +1,16 @@
 import { Outlet } from "react-router";
 import LeftDrawer from "../features/left-drawer-component/LeftDrawer";
-import "./App.css";
+import "./MainLayout.css";
 
-function App() {
+function MainLayout() {
   return (
-    <>
+    <div className="applicationWrapper">
       <LeftDrawer />
-      <div>
+      <div className="outletWrapper">
         <Outlet></Outlet>
       </div>
-    </>
+    </div>
   );
 }
 
-export default App;
+export default MainLayout;

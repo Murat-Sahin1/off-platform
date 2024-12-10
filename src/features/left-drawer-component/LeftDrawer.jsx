@@ -6,13 +6,6 @@ import { LEFT_DRAWER_BUTTONS } from "../../constants/leftDrawer";
 import { logo, profilePicture } from "../../assets";
 
 function LeftDrawer() {
-  // Might be stored in the local storage
-  const [chosenButton, setChosenButton] = useState(0);
-
-  const handleChosenButton = (index) => {
-    setChosenButton(index);
-  };
-
   return (
     <>
       <div className="leftDrawerMainContainer">
@@ -29,30 +22,15 @@ function LeftDrawer() {
             profilePicture={profilePicture}
           />
           {LEFT_DRAWER_BUTTONS[0].map((item, index) => (
-            <LeftDrawerButton
-              key={index}
-              item={item}
-              onClick={() => handleChosenButton(item.id)}
-              isActive={chosenButton === item.id}
-            />
+            <LeftDrawerButton key={index} item={item} />
           ))}
           <div className="leftDrawerRuler"></div>
           {LEFT_DRAWER_BUTTONS[1].map((item, index) => (
-            <LeftDrawerButton
-              key={index}
-              item={item}
-              onClick={() => handleChosenButton(item.id)}
-              isActive={chosenButton === item.id}
-            />
+            <LeftDrawerButton key={index} item={item} />
           ))}
           <div className="leftDrawerRuler"></div>
           {LEFT_DRAWER_BUTTONS[2].map((item, index) => (
-            <LeftDrawerButton
-              key={index}
-              item={item}
-              onClick={() => handleChosenButton(item.id)}
-              isActive={chosenButton === item.id}
-            />
+            <LeftDrawerButton key={index} item={item} />
           ))}
         </div>
       </div>
